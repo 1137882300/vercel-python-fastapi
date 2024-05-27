@@ -27,6 +27,10 @@ pip3 install uvicorn
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
+```bash
+本地网址：http://127.0.0.1:8000/random/
+```
+
 # Documentation
 - [FastAPI framework](https://fastapi.tiangolo.com/)
 - [Vercel: configure a build](https://dlj.one/ktkfme)

@@ -15,9 +15,9 @@ class ChatArgs(pydantic.BaseModel):
 
 
 @router.post("/proxy")
-async def groq_api(args: ChatArgs, authorization: str = Header(...)):
+async def gemini_api(args: ChatArgs, authorization: str = Header(...)):
     api_key = authorization.split(" ")[1]
-    client = AsyncClient(base_url="https://api.groq.com/openai/v1",
+    client = AsyncClient(base_url="https://generativelanguage.googleapis.com",
                          api_key=api_key)
     return await client.chat.completions.create(
         model=args.model,
